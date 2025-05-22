@@ -10,7 +10,7 @@
 - [How It Works](#how-it-works)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
-- [Screenshots (Example Placeholders)](#screenshots-example-placeholders)
+- [Screenshots](#screenshots)
 - [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
 - [License](#license)
@@ -160,19 +160,32 @@ A local URL (e.g., `http://127.0.0.1:7860` or similar) will be printed to your c
 5.  View the results, including any scores, generated text, and processing time.
 6.  Expand the "Document Previews" accordion to see a snippet of the uploaded document(s).
 
-## Screenshots (Example Placeholders)
+## Screenshots
 
 **Similarity Checker Tab Interface:**
 ![Similarity Checker Tab](./Screenshots/doc_similarity_checker_UI_1.png)
+
 ![Similarity Checker Tab](./Screenshots/doc_similarity_checker_UI_2.png)
+
 ![Similarity Checker Tab](./Screenshots/doc_similarity_checker_UI_3.png)
+
 ![Similarity Checker Tab](./Screenshots/doc_similarity_checker_UI_4.png)
 
 **Document Summarizer with Results:**
-`![Document Summarizer Tab](https://via.placeholder.com/600x400.png?text=Summarizer+UI+with+Results)`
+![Document Summarizer Tab](./Screenshots/Summarizer_UI_1.png)
+
+![Document Summarizer Tab](./Screenshots/Summarizer_UI_2.png)
+
+![Document Summarizer Tab](./Screenshots/Summarizer_UI_3.png)
+
+![Document Summarizer Tab](./Screenshots/Summarizer_UI_4.png)
 
 **Keyword Extractor Output:**
-`![Keyword Extractor Tab](https://via.placeholder.com/600x400.png?text=Keyword+Extractor+UI)`
+![Keyword Extractor Tab](./Screenshots/Keyword_extractor_UI_1.png)
+
+![Keyword Extractor Tab](./Screenshots/Keyword_extractor_UI_2.png)
+
+![Keyword Extractor Tab](./Screenshots/Keyword_extractor_UI_3.png)
 
 ## Future Enhancements
 
@@ -201,4 +214,3 @@ Please ensure your code adheres to good practices and include comments where nec
 ## License
 
 Distributed under the MIT License. See `LICENSE.md` for more information.
-*(You will need to create a `LICENSE.md` file in your repository. A common choice is the MIT License. You can find templates easily online, e.g., [choosealicense.com](https://choosealicense.com/licenses/mit/))*
