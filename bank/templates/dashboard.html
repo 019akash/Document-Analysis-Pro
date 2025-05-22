@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="dashboard-container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="welcome-card card">
+                <div class="card-body text-center">
+                    <h2 class="mb-3">Welcome, {{ user.name }}!</h2>
+                    <h4 class="mb-4">Current Balance: ${{ "%.2f"|format(user.balance) }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-3">
+            <div class="feature-container">
+                <i class="bi bi-cash-coin feature-icon text-success"></i>
+                <h4 class="feature-title">Deposit</h4>
+                <p class="text-center">Add funds to your account</p>
+                <a href="{{ url_for('deposit') }}" class="btn btn-success feature-button">
+                    Deposit Now
+                </a>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="feature-container">
+                <i class="bi bi-cash-stack feature-icon text-warning"></i>
+                <h4 class="feature-title">Withdraw</h4>
+                <p class="text-center">Take money from account</p>
+                <a href="{{ url_for('withdraw') }}" class="btn btn-warning feature-button">
+                    Withdraw Now
+                </a>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="feature-container">
+                <i class="bi bi-arrow-left-right feature-icon text-info"></i>
+                <h4 class="feature-title">Transfer</h4>
+                <p class="text-center">Send money to others</p>
+                <a href="{{ url_for('transfer') }}" class="btn btn-info feature-button">
+                    Transfer Now
+                </a>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <div class="feature-container">
+                <i class="bi bi-clock-history feature-icon text-secondary"></i>
+                <h4 class="feature-title">History</h4>
+                <p class="text-center">View your past transactions</p>
+                <a href="{{ url_for('transactions') }}" class="btn btn-secondary feature-button">
+                    View History
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,383 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Hero Section with Dynamic Background -->
+<div class="hero-section mb-5">
+    <div class="hero-content text-center">
+        <h1 class="display-4 fw-bold text-white mb-4">Welcome to Flask Banking</h1>
+        <p class="fs-5 text-white mb-4">A secure and intuitive platform for all your financial needs</p>
+        {% if not logged_in %}
+        <div class="d-flex gap-3 justify-content-center">
+            <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">Create Account</a>
+            <a href="{{ url_for('login') }}" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">Sign In</a>
+        </div>
+        {% else %}
+        <div class="d-flex justify-content-center">
+            <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
+                <i class="bi bi-speedometer2 me-2"></i>Access Dashboard
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Key Features Section -->
+<div class="container">
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="bi bi-shield-lock-fill feature-icon"></i>
+                </div>
+                <h3>Secure Banking</h3>
+                <p>Industry-leading encryption and security protocols to keep your money and data safe.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="bi bi-lightning-charge-fill feature-icon"></i>
+                </div>
+                <h3>Instant Transfers</h3>
+                <p>Send money to anyone, anywhere, with just a few taps. Funds arrive in seconds.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="bi bi-graph-up-arrow feature-icon"></i>
+                </div>
+                <h3>Financial Insights</h3>
+                <p>Track spending patterns and get personalized tips to improve your financial health.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="why-choose-us mb-5">
+        <div class="section-header text-center mb-4">
+            <h2 class="fw-bold">Why Choose Flask Banking</h2>
+            <div class="header-underline"></div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="info-card">
+                    <div class="card-inner">
+                        <div class="info-icon">
+                            <i class="bi bi-cash-coin"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>No Hidden Fees</h4>
+                            <p>Transparent pricing with no surprise charges. Know exactly what you're paying for.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-card">
+                    <div class="card-inner">
+                        <div class="info-icon">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Bank Anywhere</h4>
+                            <p>Access your account from any device, anytime. Banking that fits your lifestyle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-card">
+                    <div class="card-inner">
+                        <div class="info-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>24/7 Support</h4>
+                            <p>Our dedicated support team is always available to help with any questions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-card">
+                    <div class="card-inner">
+                        <div class="info-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Fraud Protection</h4>
+                            <p>Advanced security systems to detect and prevent unauthorized transactions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials-section mb-5">
+        <div class="section-header text-center mb-4">
+            <h2 class="fw-bold">What Our Customers Say</h2>
+            <div class="header-underline"></div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p>"Flask Banking has simplified my finances. The interface is intuitive and transfers are lightning fast!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar bg-primary text-white">JD</div>
+                        <div class="author-info">
+                            <h5>John Doe</h5>
+                            <p>Customer since 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p>"The security features give me peace of mind. I can bank confidently knowing my money is protected."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar bg-primary text-white">JS</div>
+                        <div class="author-info">
+                            <h5>Jane Smith</h5>
+                            <p>Customer since 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="bi bi-quote quote-icon"></i>
+                        <p>"The customer service is outstanding. Any issue I've had was resolved quickly and professionally."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar bg-primary text-white">RJ</div>
+                        <div class="author-info">
+                            <h5>Robert Johnson</h5>
+                            <p>Customer since 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section text-center mb-5">
+        <div class="cta-content p-5">
+            <h2 class="text-white mb-3">Ready to take control of your finances?</h2>
+            <p class="text-white mb-4">Join thousands of satisfied customers who trust Flask Banking</p>
+            {% if not logged_in %}
+            <a href="{{ url_for('register') }}" class="btn btn-light btn-lg px-5 py-3 rounded-pill">Get Started Now</a>
+            {% else %}
+            <a href="{{ url_for('dashboard') }}" class="btn btn-light btn-lg px-5 py-3 rounded-pill">Go to Dashboard</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Hero Section Styling */
+    .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("{{ url_for('static', filename='images/banking-hero.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 120px 20px;
+        border-radius: 0 0 50px 50px;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Feature Cards */
+    .feature-card {
+        background: white;
+        border-radius: 20px;
+        padding: 30px 25px;
+        height: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #4a90e2, #2c69b2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        color: white;
+    }
+
+    .feature-card h3 {
+        margin-bottom: 15px;
+        color: #333;
+        font-weight: 600;
+    }
+
+    .feature-card p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    /* Section Headers */
+    .section-header {
+        position: relative;
+    }
+
+    .header-underline {
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(to right, #4a90e2, #2c69b2);
+        margin: 15px auto 0;
+        border-radius: 2px;
+    }
+
+    /* Info Cards */
+    .info-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        height: 100%;
+        transition: all 0.3s ease;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-inner {
+        padding: 25px;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .info-icon {
+        font-size: 2rem;
+        color: #4a90e2;
+        margin-right: 20px;
+    }
+
+    .info-content h4 {
+        margin-bottom: 10px;
+        color: #333;
+        font-weight: 600;
+    }
+
+    .info-content p {
+        color: #666;
+        margin-bottom: 0;
+        line-height: 1.6;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 100%;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .testimonial-content {
+        padding: 30px 25px;
+        position: relative;
+    }
+
+    .quote-icon {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 2rem;
+        color: #f0f0f0;
+        z-index: 0;
+    }
+
+    .testimonial-content p {
+        position: relative;
+        z-index: 1;
+        color: #555;
+        line-height: 1.7;
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        padding: 15px 25px;
+        background: #f9f9f9;
+    }
+
+    .author-avatar {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 15px;
+    }
+
+    .author-info h5 {
+        margin-bottom: 2px;
+        color: #333;
+    }
+
+    .author-info p {
+        margin-bottom: 0;
+        font-size: 0.85rem;
+        color: #777;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        margin-top: 50px;
+    }
+
+    .cta-content {
+        background: linear-gradient(135deg, #4a90e2, #2c69b2);
+        border-radius: 25px;
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 80px 15px;
+        }
+        
+        .card-inner {
+            flex-direction: column;
+        }
+        
+        .info-icon {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+</style>
+{% endblock %}

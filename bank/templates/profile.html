@@ -1,0 +1,69 @@
+!-- templates/profile.html (completed) -->
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Profile Settings</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" class="needs-validation" novalidate>
+                    <input type="hidden" name="action" value="update">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="current_password" class="form-label">Current Password</label>
+                        <input type="password" class="form-control" id="current_password" name="current_password" required>
+                        <div class="invalid-feedback">Please enter your current password.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="new_password" class="form-label">New Password (Leave blank to keep current)</label>
+                        <input type="password" class="form-control" id="new_password" name="new_password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="card border-danger">
+            <div class="card-header bg-danger text-white">
+                <h2>Delete Account</h2>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Warning: This action cannot be undone. All your data will be permanently deleted.</p>
+                <form method="post">
+                    <input type="hidden" name="action" value="delete">
+                    <div class="mb-3">
+                        <label for="delete_password" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="delete_password" name="delete_password" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.')">Delete My Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Form validation
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            const forms = document.getElementsByClassName('needs-validation');
+            Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+{% endblock %}
