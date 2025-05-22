@@ -163,10 +163,10 @@ A local URL (e.g., `http://127.0.0.1:7860` or similar) will be printed to your c
 ## Screenshots (Example Placeholders)
 
 **Similarity Checker Tab Interface:**
-![Similarity Checker Tab](.Screenshots/doc_similarity_checker_UI_1.png)
-![Similarity Checker Tab](.Screenshots/doc_similarity_checker_UI_2.png)
-![Similarity Checker Tab](.Screenshots/doc_similarity_checker_UI_3.png)
-![Similarity Checker Tab](.Screenshots/doc_similarity_checker_UI_4.png)
+![Similarity Checker Tab](./Screenshots/doc_similarity_checker_UI_1.png)
+![Similarity Checker Tab](./Screenshots/doc_similarity_checker_UI_2.png)
+![Similarity Checker Tab](./Screenshots/doc_similarity_checker_UI_3.png)
+![Similarity Checker Tab](./Screenshots/doc_similarity_checker_UI_4.png)
 
 **Document Summarizer with Results:**
 `![Document Summarizer Tab](https://via.placeholder.com/600x400.png?text=Summarizer+UI+with+Results)`
