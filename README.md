@@ -142,7 +142,7 @@ Run the main Python script (`app.py`):
 
 ```bash
 python app.py
-
+```
 This will:
 1.  Attempt to install any missing required packages.
 2.  Download NLTK resources if needed.
@@ -162,10 +162,8 @@ A local URL (e.g., `http://127.0.0.1:7860` or similar) will be printed to your c
 
 ## Screenshots (Example Placeholders)
 
-*(It's highly recommended to replace these with actual screenshots of your application)*
-
 **Similarity Checker Tab Interface:**
-`![Similarity Checker Tab](https://via.placeholder.com/600x400.png?text=Similarity+Checker+UI)`
+
 
 **Document Summarizer with Results:**
 `![Document Summarizer Tab](https://via.placeholder.com/600x400.png?text=Summarizer+UI+with+Results)`
@@ -200,3 +198,4 @@ Please ensure your code adheres to good practices and include comments where nec
 ## License
 
 Distributed under the MIT License. See `LICENSE.md` for more information.
+*(You will need to create a `LICENSE.md` file in your repository. A common choice is the MIT License. You can find templates easily online, e.g., [choosealicense.com](https://choosealicense.com/licenses/mit/))*
